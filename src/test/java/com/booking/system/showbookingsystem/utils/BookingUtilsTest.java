@@ -144,9 +144,7 @@ class BookingUtilsTest {
 
     @Test
     public void shouldReturnNull_whenGivenNull() {
-        String testString = null;
-
-        assertNull(BookingUtils.parseCommaSeparatedString(testString));
+        assertNull(BookingUtils.parseCommaSeparatedString(null));
     }
 
     @Test

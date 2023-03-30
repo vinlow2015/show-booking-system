@@ -46,17 +46,4 @@ class ShowRepositoryTest {
         assertTrue(optionalShow.isPresent());
         assertEquals(expected, optionalShow.get());
     }
-
-
-//    @Test
-//    void shouldReturnListOfShows_whenRunningFindAllMethod() {
-//        Show show1 = new Show(1L, 1, 1, 1);
-//        Show show2 = new Show(2L, 10, 10, 1);
-//        List<Show> expected = List.of(show1, show2);
-//
-//        List<Show> actual = (List<Show>) showRepository.findAll();
-//
-//        assertEquals(expected, actual);
-//    }
-
 }

@@ -22,9 +22,9 @@ import java.util.Scanner;
 
 @Component
 public class MenuInputter implements CommandLineRunner {
-    ShowService showService;
-    BookingService bookingService;
-    TicketService ticketService;
+    final ShowService showService;
+    final BookingService bookingService;
+    final TicketService ticketService;
     final Clock clock;
     @Value("${cancellation.window}")
     private int cancellationInMinutes;
@@ -118,7 +118,7 @@ public class MenuInputter implements CommandLineRunner {
         Scanner scanner = new Scanner(System.in);
         Long showNum;
         Show show = null;
-        //TODO disable shows with no seats available from being booked
+
         do {
             System.out.println("Please enter the show number you would like to book: ");
             showNum = BookingUtils.parseLong(scanner.next());
